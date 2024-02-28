@@ -33,6 +33,7 @@ allprojects {
 		}
 	}
 
+	tasks.bootRun { enabled = false }
 	tasks.bootJar { enabled = false }
 	tasks.bootBuildImage { enabled = false }
 }
@@ -68,6 +69,7 @@ subprojects {
 project(":gradle-multi-module-template-app") {
 	tasks.jar {enabled = true }
 	tasks.bootJar { enabled = true }
+	tasks.bootRun { enabled = true }
 }
 
 /* report is always generated after tests run */
