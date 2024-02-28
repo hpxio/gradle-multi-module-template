@@ -29,6 +29,9 @@ allprojects {
 
 	configure<com.diffplug.gradle.spotless.SpotlessExtension> {
 		java {
+			removeUnusedImports()
+			trimTrailingWhitespace()
+			/*importOrderFile("eclipse.importorder")*/
 			googleJavaFormat().aosp().reflowLongStrings()
 		}
 	}
